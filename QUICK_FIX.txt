@@ -1,0 +1,102 @@
+================================================================================
+                    QUICK FIX FOR PYMYSQL ERROR
+================================================================================
+
+ERROR YOU SEE:
+  ERROR:database:Database initialization failed: No module named 'pymysql'
+
+CAUSE:
+  Python dependencies haven't been installed yet.
+
+QUICK SOLUTION (Copy-Paste):
+================================================================================
+
+1. Open PowerShell/Command Prompt
+
+2. Go to backend folder:
+   cd "D:\Final Year Project\real-time-incident-detection\backend"
+
+3. Install dependencies:
+   pip install -r requirements.txt
+
+   OR use setup script (double-click):
+   setup.bat
+
+4. Wait for installation to complete (should see "Successfully installed...")
+
+5. Run backend:
+   python app.py
+
+6. You should see:
+   INFO:__main__:CrimeDetect API Server running on http://localhost:5000
+
+DONE! Backend is now running.
+
+================================================================================
+
+NEXT: In a NEW PowerShell/Command Prompt window:
+
+1. Go to project root:
+   cd "D:\Final Year Project\real-time-incident-detection"
+
+2. Start frontend:
+   npm run dev
+
+3. Open browser:
+   http://localhost:3000
+
+================================================================================
+
+IF STILL NOT WORKING:
+
+1. Check Python:
+   python --version
+   (Should be 3.8 or higher)
+
+2. Check pip:
+   pip --version
+
+3. Try manual install:
+   python -m pip install -r requirements.txt
+
+4. Check MySQL is running:
+   mysql -u root -p
+   (Enter your password)
+
+5. If MySQL password is wrong, edit backend/.env:
+   MYSQL_PASSWORD=your_actual_password
+
+================================================================================
+
+RUNNING TOGETHER:
+
+Terminal 1 (Backend):
+  cd backend
+  python app.py
+  
+Terminal 2 (Frontend):
+  npm run dev
+
+Terminal 3 (Optional - Watch backend logs):
+  Keep Terminal 1 visible
+
+Browser:
+  http://localhost:3000
+
+================================================================================
+
+WHAT GETS INSTALLED:
+  - Flask (web framework)
+  - PyMySQL (database driver) ← This was missing
+  - SQLAlchemy (database ORM)
+  - Flask-SocketIO (real-time updates)
+  - And 8 other supporting packages
+
+Total size: ~50MB
+Time: 2-5 minutes
+
+================================================================================
+
+For detailed help, read: GETTING_STARTED.md
+
+Good luck! 🚀
