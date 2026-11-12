@@ -49,7 +49,7 @@ A full-stack real-time crime and incident detection system with live camera moni
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/crime-detection.git
+git clone https://github.com/KomailMK/crime-detection.git
 cd crime-detection
 ```
 
